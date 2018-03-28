@@ -27,7 +27,7 @@ class UserTest extends TestCase
         $this->assertEquals($userCount,50);
     }
 
-    public function testInsertUser()
+    /*public function testInsertUser()
     {
         $user = new User();
         $user->name= 'New User';
@@ -44,5 +44,5 @@ class UserTest extends TestCase
         $this->assertTrue($user->save());
 
 
-    }
+    }*/
 }

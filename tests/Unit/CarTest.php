@@ -26,4 +26,16 @@ class CarTest extends TestCase
         $carCount = 50;
         $this->assertEquals($carCount,50);
     }
+
+    public function testCarUser()
+    {
+        $car = new cars();
+        $car->make= 'Honday';
+        $car->model= 'civic';
+        $car->year= '2018';
+
+        $this->assertTrue($car->save());
+    }
+
+
 }

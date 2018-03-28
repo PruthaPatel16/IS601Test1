@@ -26,4 +26,14 @@ class UserTest extends TestCase
         $userCount = 50;
         $this->assertEquals($userCount,50);
     }
+
+    public function testInsertUser()
+    {
+        $user = new User();
+        $user->name= 'New User';
+        $user->email= 'user@email.com';
+        $user->password= 'UserPass';
+
+        $this->assertTrue($user->save());
+    }
 }

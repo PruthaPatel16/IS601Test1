@@ -45,4 +45,18 @@ class UserTest extends TestCase
 
 
     }*/
+
+    public function testDeleteUser()
+    {
+        $user = new User();
+        $user->name= 'New User1';
+        $user->email= 'user1@email.com';
+        $user->password= 'UserPass1';
+        $user->save();
+
+        $this->assertTrue($user->delete());
+    }
+
+
+
 }

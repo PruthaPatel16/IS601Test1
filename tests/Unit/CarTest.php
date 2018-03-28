@@ -35,7 +35,9 @@ class CarTest extends TestCase
         $car->year= '2018';
 
         $this->assertTrue($car->save());
-    }*/
+    }
+
+
 
     public function testUpdateCar()
     {
@@ -44,7 +46,7 @@ class CarTest extends TestCase
         $this->assertTrue($car->save());
 
 
-    }
+    }*/
 
 
 }

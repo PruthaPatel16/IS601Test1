@@ -36,4 +36,13 @@ class UserTest extends TestCase
 
         $this->assertTrue($user->save());
     }
+
+    public function testUpdateUser()
+    {
+        $user =User::find(1);
+        $user->name = "Steve Smith";
+        $this->assertTrue($user->save());
+
+
+    }
 }

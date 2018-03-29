@@ -68,13 +68,14 @@ class CarTest extends TestCase
         $this->assertInternalType(IsType::TYPE_INT,$year1);
     }
 
-    /*public function testCarMake()
+    public function testCarMake()
     {
 
         $car =cars::find(1);
-        $year1 = $car->make;
-        $this->assertInternalType(IsType::TYPE_INT,$year1);
-    }*/
+        $make = (string) $car->make;
+        $this->assertContains($make,['ford','toyota','honda']);
+
+    }
 
     public function testCarModel()
     {

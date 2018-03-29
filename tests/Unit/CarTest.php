@@ -2,6 +2,7 @@
 
 namespace Tests\Unit;
 
+use PHPUnit\Framework\Constraint\IsType;
 use Tests\TestCase;
 use Illuminate\Foundation\Testing\WithFaker;
 use Illuminate\Foundation\Testing\RefreshDatabase;
@@ -58,6 +59,15 @@ class CarTest extends TestCase
 
         $this->assertTrue($car->delete());
     }
+
+    public function testCarYear()
+    {
+
+        $car =cars::find(1);
+        $year1 = (int) $car->year;
+        $this->assertInternalType(IsType::TYPE_INT,$year1);
+    }
+
 
 
 }
